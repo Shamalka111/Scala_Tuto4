@@ -15,11 +15,10 @@ object fun extends App{
         func(name)
     }
 
-    println(toUpper("Benny"))
-    println(toLower("NIROSHAN"))
+    println(formatNames("Benny")(toUpper(_)))
+    println(formatNames("Niroshan".substring(0,2))(toUpper(_)) + "Niroshan".substring(2))
     println(formatNames("Saman")(toLower(_)))
-    println(formatNames("Kumara")(toUpper(_)))
-    
+    println("Kumara".substring(0,5) + formatNames("Kumara".substring(5))(toUpper(_)))
 
 
 }
